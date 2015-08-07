@@ -14,7 +14,7 @@
     <p><%= product.description %></p>
     <div class="price_line">
       <span class="price">
-        <%= product.price %> €
+        <%= sprintf("$%0.02f", product.price) %> 
       </span>
     </div>
   </div>
