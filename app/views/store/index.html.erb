@@ -7,15 +7,22 @@
 
 <h1>Your Pragmatic Catalog</h1>
 
-<% @products.each do |product| %>
-  <div class="entry">
-    <%= image_tag(product.image_url) %>
-    <h3><%= product.title %></h3>
-    <p><%= product.description %></p>
-    <div class="price_line">
-      <span class="price">
-        <%= sprintf("$%0.02f", product.price) %> 
-      </span>
+<% cache(['store', Product.latest]) do %>
+
+  <% @products.each do |product| %>
+    <% cache(['entry', product]) do %>
+
+    <div class="entry">
+      <%= image_tag(product.image_url) %>
+      <h3><%= product.title %></h3>
+      <p><%= product.description %></p>
+      <div class="price_line">
+        <span class="price">
+          <%= sprintf("$%0.02f", product.price) %>
+        </span>
+      </div>
     </div>
-  </div>
+  <% end %>
+
+  <% end %>
 <% end %>
