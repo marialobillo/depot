@@ -61,7 +61,7 @@ rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
     session[:cart_id] = nil
 
     respond_to do |format|
-      format.html { redirect_to carts_url, notice: 'Your Cart is currently empty.' }
+      format.html { redirect_to store_path, notice: 'Your Cart is currently empty.' }
       format.json { head :no_content }
     end
   end
