@@ -1,4 +1,6 @@
 class StoreController < ApplicationController
+  include CurrentCart
+  before :set_cart
   def index
     @products = Product.order(:title)
 
@@ -19,7 +21,7 @@ class StoreController < ApplicationController
     if @count == 0
       session_greeting = "Welcome!"
     else
-      session_greeting = @count  
+      session_greeting = @count
     end
   end
 end
