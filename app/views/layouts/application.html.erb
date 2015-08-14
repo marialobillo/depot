@@ -14,7 +14,11 @@
 </div>
 <div id="columns">
   <div id="side">
-    <div class="cart">
+    <div class="cart"
+      <% if @cart.line_items.empty? %>
+        style="display: none"
+      <% end %>
+    >
       <%= render @cart %>
     </div>
     <ul>
