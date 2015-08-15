@@ -19,7 +19,9 @@
         style="display: none"
       <% end %>
     >
-      <%= render @cart %>
+      <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+        <%= render @cart %>
+      <% end %>
     </div>
     <ul>
       <li><a href="">Home</a></li>
