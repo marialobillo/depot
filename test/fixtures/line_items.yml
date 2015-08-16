@@ -3,9 +3,7 @@
 one:
   product: ruby
   cart: one
-  product_price: 20.50
 
 two:
   product: ruby
   cart: one
-  product_price: 10.40
