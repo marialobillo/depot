@@ -35,5 +35,10 @@ class UserStoriesTest < ActionDispatch::IntegrationTest
     assert_equal 1, order.line_items.size
     line_item = order.line_items[0]
     assert_equal ruby_book, line_item.product
+
+    mail = ActionMailer::Base.deliveries.last
+    assert_equal ["dave@example.com"], mail.to
+    assert_equal 'Name <depot@example.com>', mail[:from].value
+    assert_equal "Store Order Confirmation", mail.subject
   end
 end
