@@ -3,7 +3,7 @@
 one:
   name: Dave Thomas
   address: 9th Street
-  email: dave@example.org
+  email: order@example.com
   pay_type: Check
 
 two:
