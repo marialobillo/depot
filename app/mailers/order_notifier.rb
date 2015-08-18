@@ -1,6 +1,6 @@
 class OrderNotifier < ApplicationMailer
 
-  default from: 'Maria Lobillo < depot@okzen.com>'
+  default from: 'Maria Lobillo < depot@example.org>'
 
   def received(order)
     @order = order
@@ -14,9 +14,9 @@ class OrderNotifier < ApplicationMailer
   #
   #   en.order_notifier.shipped.subject
   #
-  def shipped
-    @greeting = "Hi"
+  def shipped(order)
+    @order = order
 
-    mail to: "to@example.org"
+    mail to: order.email, subject: "Hello, Store Order Shipped"
   end
 end
