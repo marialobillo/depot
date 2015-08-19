@@ -12,13 +12,17 @@ Rails.application.routes.draw do
   get 'sessions/destroy'
 
   resources :users
-  resources :orders
-  resources :line_items
-  resources :carts
 
   #get 'store/index'
   resources :products do
     get :who_bought, on: :member
+  end
+
+  scope '(:locale)' do
+    resources :orders
+    resources :line_items
+    resources :carts
+    root 'store#index', as: 'store', via: :all
   end
 
   get 'store/index'
@@ -26,6 +30,5 @@ Rails.application.routes.draw do
     get :who_bought, on: :member
   end
 
-  root 'store#index', as: 'store'
 
 end
