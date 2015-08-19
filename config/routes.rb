@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'admin/index' => 'admin#index'
+  get 'admin' => 'admin#index'
 
   controller :sessions do
     get 'login' => :new
@@ -23,7 +23,7 @@ Rails.application.routes.draw do
 
   get 'store/index'
   resources :products do
-    get :who_bought, on :member
+    get :who_bought, on: :member
   end
 
   root 'store#index', as: 'store'

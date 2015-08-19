@@ -1,4 +1,5 @@
 class StoreController < ApplicationController
+  skip_before_action :authorize, only: [:create, :update, :destroy]
   include CurrentCart
   before_action :set_cart
   def index
@@ -24,4 +25,10 @@ class StoreController < ApplicationController
       session_greeting = @count
     end
   end
+
+  private
+    def invalid_cart
+      logger.error "Attempt to access invalid cart #{params[:id]}"
+      redirect_to store_url, notice: 'Invalid cart'
+    end
 end
