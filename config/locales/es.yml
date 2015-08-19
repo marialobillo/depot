@@ -1,0 +1,15 @@
+
+
+es:
+
+  layouts:
+    application:
+      title:        "Librería Mágica"
+      home:         "Inicio"
+      questions:    "Preguntas"
+      news:         "Noticias"
+      contact:      "Contacto"
+      products:     "Productos"
+      orders:       "Pedidos"
+      users:        "Usuarios"
+      

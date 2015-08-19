@@ -21,3 +21,14 @@
 
 en:
   hello: "Hello world"
+
+  layouts:
+    application:
+      title:        "Magic Bookshelf"
+      home:         "Home"
+      questions:    "Questions"
+      news:         "News"
+      contact:      "Contact"
+      products:     "Products"
+      orders:       "Orders"
+      users:        "Users"
