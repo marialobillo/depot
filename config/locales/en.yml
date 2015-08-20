@@ -1,6 +1,7 @@
 
 en:
   hello: "Hello world"
+  thanks: "Thank you for your order"
 
   layouts:
     application:

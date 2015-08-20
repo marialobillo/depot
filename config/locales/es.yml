@@ -1,6 +1,7 @@
 
 
 es:
+  thanks: "Gracias por su pedido."
 
   layouts:
     application:
@@ -50,6 +51,14 @@ es:
       messages:
         inclusion: "no est&aacute; incluido en la lista."
         blank: "No puede quedar en blanco"
+    models:
+      order: "pedido"
+    attributes:
+      order:
+        address: "Direcci&oacute;n"
+        name: "Nombre"
+        email: "E-mail"
+        pay_type: "Forma de Pago"
   errors:
     template:
       body: "Hoy problemas con los siguientes campos:"
