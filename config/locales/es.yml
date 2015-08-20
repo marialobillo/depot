@@ -12,4 +12,15 @@ es:
       products:     "Productos"
       orders:       "Pedidos"
       users:        "Usuarios"
-      
+
+  store:
+    index:
+      title_html: "Su catálogo"
+      add_html: "Añadir al Carrito"
+
+  carts:
+    cart:
+      title: "Tu Carrito"
+      checkout: "Comprar"
+      empty: "Vaciar Carrito"
+      sure: "¿Está usted seguro?"
