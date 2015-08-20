@@ -44,3 +44,15 @@ es:
       pay_type: "Forma de Pago"
       pay_prompt_html: "Seleccione un m&eacute;todo de Pago"
       submit: "Realizar Pago"
+
+  activerecord:
+    errors:
+      messages:
+        inclusion: "no est&aacute; incluido en la lista."
+        blank: "No puede quedar en blanco"
+  errors:
+    template:
+      body: "Hoy problemas con los siguientes campos:"
+      header:
+        one: "1 error ha impedido que este %{model} se guarde"
+        other: "%{count} errores han impedido que este %{model} se guarde"
