@@ -3,8 +3,12 @@ class StoreController < ApplicationController
   include CurrentCart
   before_action :set_cart
   def index
-    @products = Product.order(:title)
-
+    if params[:set_locale]
+      redirect_to store_url(locale: params[:set_locale])
+    else
+      @products = Product.order(:title)
+    end
+    
     @count = session_count
     @session_greeting_msg = session_greeting
     flash[:notice] = @session_greeting_msg
